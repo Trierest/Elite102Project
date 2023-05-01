@@ -7,13 +7,13 @@ connection = mysql.connector.connect(
 )
 
 cursor = connection.cursor()
-testQuery = ("SELECT * FROM weapons")
+testQuery = ("SELECT Name FROM banking")
 cursor.execute(testQuery)
 
-addQuery = ("INSERT INTO weapons (name, damage, gem_price) VALUES ('Hat',1,40)")
-# addData = ("INSERT INTO weapons (name, damage, gem_price) VALUES (\"Boots,7,7)")
-cursor.execute(addQuery)
-connection.commit()
+# addQuery = ("INSERT INTO weapons (name, damage, gem_price) VALUES ('Hat',1,40)")
+# # addData = ("INSERT INTO weapons (name, damage, gem_price) VALUES (\"Boots,7,7)")
+# cursor.execute(addQuery)
+# connection.commit()
 
 for item in cursor:
     print(item)
